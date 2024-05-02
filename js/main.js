@@ -100,38 +100,28 @@
  /*----------------------------
  Active-Product-Carosel
 ------------------------------ */   
-$(".active-product-carosel").owlCarousel({
-      autoPlay: false, 
-	  slideSpeed:2000,
-	  pagination:false,
-	  navigation:true,	  
-	  margin:20,
-	  nav:true,
-	  navigationText:["<i class='fa fa-angle-left'></i>","<i class='fa fa-angle-right'></i>"],
-	  responsive:{
-		0:{
-			items:1
-		},
-		767:{
-			items:2
-		},
-		991:{
-			items:2
-		},
-		1169:{
-			items:3
-		},
-		1200:{
-			items:4
-		}
-	}  
-});
+
   
+
+	$(".active-bestseller").owlCarousel({
+		autoPlay: false, 
+		slideSpeed: 2000,
+		pagination: false,
+		navigation: true,	  
+		items: 1,
+		navigationText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
+		itemsDesktop: [1169, 1],
+		itemsTablet: [991, 1],
+		itemsTabletSmall: [767, 1],
+		itemsMobile: [479, 1],
+	}); 
+	
+	
  /*----------------------------
  Active-Small-Product
 ------------------------------ */   
   $(".active-small-product").owlCarousel({
-      autoPlay: false, 
+      autoPlay: false, 					
 	  slideSpeed:2000,
 	  pagination:false,
 	  navigation:true,	  
@@ -340,3 +330,35 @@ $('.toch-photo').zoom();
 
  
 })(jQuery); 
+
+
+function initCarrousel(target = ".active-product-carosel") {
+	$(target).owlCarousel({
+		autoPlay: false, 
+		slideSpeed:2000,
+		pagination:false,
+		navigation:true,	  
+		margin:20,
+		nav:true,
+		navigationText:["<i class='fa-angle-left'></i>","<i class='fa fa-angle-right'></i>"],
+		responsive:{
+			0:{
+				items:1
+			},
+			767:{
+				items:2
+			},
+			991:{
+				items:2
+			},
+			1169:{
+				items:3
+			},
+			1200:{
+				items:4
+			}
+		}  
+	});
+}
+
+initCarrousel()

@@ -25,6 +25,12 @@
     top:0px;
     left:0px;
 } */
+
+.direction {
+    height: 1000px;
+}
+
+
 .nivoSlider {
 	position:relative;
 	width:100%;
