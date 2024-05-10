@@ -53,18 +53,7 @@
 /*----------------------------
  Active-Bestseller
 ------------------------------ */  
-  $(".active-bestseller").owlCarousel({
-      autoPlay: false, 
-	  slideSpeed:2000,
-	  pagination:false,
-	  navigation:true,	  
-      items : 1,
-	  navigationText:["<i class='fa fa-angle-left'></i>","<i class='fa fa-angle-right'></i>"],
-	  itemsDesktop : [1169,1],
-	  itemsTablet: [991,1],
-	  itemsTabletSmall: [767,1],
-	  itemsMobile : [479,1],
-  });
+
 
 /*----------------------------
  Active-Sidebar-Banner
@@ -150,29 +139,10 @@
  /*----------------------------
  Active-Brand-Logo
 ------------------------------ */   
-  $(".active-brand-logo").owlCarousel({
-      autoPlay: false, 
-	  slideSpeed:2000,
-	  pagination:false,
-	  navigation:true,	  
-      items : 6,
-	  nav: true,
-	  navigationText:["<i class='fa fa-angle-left'></i>","<i class='fa fa-angle-right'></i>"],
-	  responsive:{
-		0:{
-			items:2
-		},
-		767:{
-			items:3
-		},
-		991:{
-			items:4
-		},
-		1200:{
-			items:5
-		}
-	}  
-  });
+
+
+
+
 
  /*----------------------------
  Active-Hot-Deals-Style-2
@@ -362,3 +332,49 @@ function initCarrousel(target = ".active-product-carosel") {
 }
 
 initCarrousel()
+
+
+
+function masvendido(target2=".active-bestseller")
+{
+	$(target2).owlCarousel({
+		autoPlay: false, 
+		slideSpeed:2000,
+		pagination:false,
+		navigation:true,	  
+		items : 1,
+		navigationText:["<i class='fa fa-angle-left'></i>","<i class='fa fa-angle-right'></i>"],
+		itemsDesktop : [1169,1],
+		itemsTablet: [991,1],
+		itemsTabletSmall: [767,1],
+		itemsMobile : [479,1],
+	});
+}
+
+masvendido()
+function MisMarcas(target=".active-brand-logo"){
+	$(target).owlCarousel({
+		autoPlay: false, 
+		slideSpeed:2000,
+		pagination:false,
+		navigation:true,	  
+		items : 6,
+		nav: true,
+		navigationText:["<i class='fa fa-angle-left'></i>","<i class='fa fa-angle-right'></i>"],
+		responsive:{
+		  0:{
+			  items:2
+		  },
+		  767:{
+			  items:3
+		  },
+		  991:{
+			  items:4
+		  },
+		  1200:{
+			  items:5
+		  }
+	  }  
+	});
+}
+MisMarcas()
